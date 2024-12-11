@@ -229,3 +229,5 @@ D:\Learn Hasibul\AuthAppDotNet\src\Web.Api\AuthAppDotNet.Api\obj\Debug\net8.0\re
 D:\Learn Hasibul\AuthAppDotNet\src\Web.Api\AuthAppDotNet.Api\obj\Debug\net8.0\AuthAppDotNet.Api.pdb
 D:\Learn Hasibul\AuthAppDotNet\src\Web.Api\AuthAppDotNet.Api\obj\Debug\net8.0\AuthAppDotNet.Api.genruntimeconfig.cache
 D:\Learn Hasibul\AuthAppDotNet\src\Web.Api\AuthAppDotNet.Api\obj\Debug\net8.0\ref\AuthAppDotNet.Api.dll
+D:\Learn Hasibul\AuthAppDotNet\src\Web.Api\AuthAppDotNet.Api\bin\Debug\net8.0\appsettings.Example.json
+D:\Learn Hasibul\AuthAppDotNet\src\Web.Api\AuthAppDotNet.Api\obj\Debug\net8.0\AuthAppDotNet.Api.sourcelink.json
