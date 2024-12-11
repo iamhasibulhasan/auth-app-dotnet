@@ -1,0 +1,11 @@
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\bin\Debug\net8.0\AuthAppDotNet.Infrastructure.deps.json
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\bin\Debug\net8.0\AuthAppDotNet.Infrastructure.dll
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\bin\Debug\net8.0\AuthAppDotNet.Infrastructure.pdb
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\obj\Debug\net8.0\AuthAppDotNet.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\obj\Debug\net8.0\AuthAppDotNet.Infrastructure.AssemblyInfoInputs.cache
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\obj\Debug\net8.0\AuthAppDotNet.Infrastructure.AssemblyInfo.cs
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\obj\Debug\net8.0\AuthAppDotNet.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\obj\Debug\net8.0\AuthAppDotNet.Infrastructure.dll
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\obj\Debug\net8.0\refint\AuthAppDotNet.Infrastructure.dll
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\obj\Debug\net8.0\AuthAppDotNet.Infrastructure.pdb
+D:\Learn Hasibul\AuthAppDotNet\src\Core\AuthAppDotNet.Infrastructure\obj\Debug\net8.0\ref\AuthAppDotNet.Infrastructure.dll

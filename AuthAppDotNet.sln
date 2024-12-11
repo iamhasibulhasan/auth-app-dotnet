@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{17171C85-069B-450B-9C04-1E0A9E09E729}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web.Api", "Web.Api", "{BD73B15D-C96F-44F5-87F2-F526461F1433}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{AAB2C8CE-0835-4ECC-A680-E34D7B94E2B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthAppDotNet.Api", "src\Web.Api\AuthAppDotNet.Api\AuthAppDotNet.Api.csproj", "{AA7F9D4F-9562-4DB9-8626-EE971DE0ED89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthAppDotNet.Application", "src\Core\AuthAppDotNet.Application\AuthAppDotNet.Application.csproj", "{8FE3263E-8E44-4BFC-9C97-81CEE1D6416D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthAppDotNet.Domain", "src\Core\AuthAppDotNet.Domain\AuthAppDotNet.Domain.csproj", "{0EF97426-A658-4ED2-8768-9BE0A6B52A13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthAppDotNet.Infrastructure", "src\Core\AuthAppDotNet.Infrastructure\AuthAppDotNet.Infrastructure.csproj", "{913BD315-C076-419C-9E7A-8C1379AE0258}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA7F9D4F-9562-4DB9-8626-EE971DE0ED89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7F9D4F-9562-4DB9-8626-EE971DE0ED89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7F9D4F-9562-4DB9-8626-EE971DE0ED89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7F9D4F-9562-4DB9-8626-EE971DE0ED89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE3263E-8E44-4BFC-9C97-81CEE1D6416D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE3263E-8E44-4BFC-9C97-81CEE1D6416D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE3263E-8E44-4BFC-9C97-81CEE1D6416D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE3263E-8E44-4BFC-9C97-81CEE1D6416D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EF97426-A658-4ED2-8768-9BE0A6B52A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF97426-A658-4ED2-8768-9BE0A6B52A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF97426-A658-4ED2-8768-9BE0A6B52A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF97426-A658-4ED2-8768-9BE0A6B52A13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{913BD315-C076-419C-9E7A-8C1379AE0258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{913BD315-C076-419C-9E7A-8C1379AE0258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{913BD315-C076-419C-9E7A-8C1379AE0258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{913BD315-C076-419C-9E7A-8C1379AE0258}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BD73B15D-C96F-44F5-87F2-F526461F1433} = {17171C85-069B-450B-9C04-1E0A9E09E729}
+		{AAB2C8CE-0835-4ECC-A680-E34D7B94E2B9} = {17171C85-069B-450B-9C04-1E0A9E09E729}
+		{AA7F9D4F-9562-4DB9-8626-EE971DE0ED89} = {BD73B15D-C96F-44F5-87F2-F526461F1433}
+		{8FE3263E-8E44-4BFC-9C97-81CEE1D6416D} = {AAB2C8CE-0835-4ECC-A680-E34D7B94E2B9}
+		{0EF97426-A658-4ED2-8768-9BE0A6B52A13} = {AAB2C8CE-0835-4ECC-A680-E34D7B94E2B9}
+		{913BD315-C076-419C-9E7A-8C1379AE0258} = {AAB2C8CE-0835-4ECC-A680-E34D7B94E2B9}
+	EndGlobalSection
+EndGlobal
