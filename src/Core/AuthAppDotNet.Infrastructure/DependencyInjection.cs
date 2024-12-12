@@ -18,8 +18,7 @@ public static class DependencyInjection
         options.UseNpgsql(configuration.GetConnectionString("DbConnection"), b => b.MigrationsAssembly(typeof(DefaultDbContext).Assembly.FullName)));
 
         // services from identity core
-        services.AddIdentityApiEndpoints<ApplicationUser>()
-            .AddEntityFrameworkStores<DefaultDbContext>();
+        services.AddIdentity<ApplicationUser, Role>().AddEntityFrameworkStores<DefaultDbContext>();
         Dependency(services);
         return services;
     }

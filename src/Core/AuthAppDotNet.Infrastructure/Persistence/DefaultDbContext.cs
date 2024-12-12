@@ -5,13 +5,13 @@ using System.Reflection;
 
 namespace AuthAppDotNet.Infrastructure.Persistence;
 
-public sealed class DefaultDbContext : IdentityDbContext
+public sealed class DefaultDbContext : IdentityDbContext<ApplicationUser, Role, int>
 {
     public DefaultDbContext(DbContextOptions<DefaultDbContext> options) : base(options) { }
 
     #region Authentication
     public DbSet<ApplicationUser> ApplicationUsers { get; set; }
-    //public DbSet<Role> Roles { get; set; }
+    public DbSet<Role> Roles { get; set; }
     #endregion
 
     //This is for entity(configuration) reading
