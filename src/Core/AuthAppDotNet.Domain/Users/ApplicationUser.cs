@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AuthAppDotNet.Domain.Users;
 
-public sealed class ApplicationUser : IdentityUser<int>
+public sealed class ApplicationUser : IdentityUser
 {
     [Required]
     [MaxLength(100)]
