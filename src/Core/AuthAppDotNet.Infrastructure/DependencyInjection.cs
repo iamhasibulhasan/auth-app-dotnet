@@ -1,4 +1,5 @@
-﻿using AuthAppDotNet.Infrastructure.Persistence;
+﻿using AuthAppDotNet.Domain.Users;
+using AuthAppDotNet.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +15,8 @@ public static class DependencyInjection
         services.AddDbContext<DefaultDbContext>(options =>
         options.UseNpgsql(configuration.GetConnectionString("DbConnection"), b => b.MigrationsAssembly(typeof(DefaultDbContext).Assembly.FullName)));
 
+        services.AddAuthentication();
+        services.AddIdentity<ApplicationUser, Role>().AddEntityFrameworkStores<DefaultDbContext>();
         Dependency(services);
         return services;
     }
