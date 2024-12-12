@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Login\" />
+    <Folder Include="Features\Users\" />
     <Folder Include="ServiceInterfaces\" />
   </ItemGroup>
 

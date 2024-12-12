@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthAppDotNet.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7d5b7accaa07bb17b45556e237732c3bea43211")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c85c2283652e398dc6bad152a4eedaf91ba960e")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuthAppDotNet.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuthAppDotNet.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

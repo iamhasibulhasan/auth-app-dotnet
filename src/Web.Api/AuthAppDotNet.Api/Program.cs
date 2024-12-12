@@ -1,6 +1,6 @@
 using AuthAppDotNet.Application;
-using AuthAppDotNet.Domain.Users;
 using AuthAppDotNet.Infrastructure;
+using Microsoft.AspNetCore.Identity;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,12 +26,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.MapIdentityApi<ApplicationUser>();
+
+
 app.UseHttpsRedirection();
-
-
 app.UseAuthorization();
-
 app.MapControllers();
+app
+    .MapGroup("/api")
+    .MapIdentityApi<IdentityUser>(); // various identity api
 
 app.Run();
