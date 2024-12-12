@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Persistence\Configurations\Users\" />
-    <Folder Include="ServiceImplementations\" />
   </ItemGroup>
 
   <ItemGroup>

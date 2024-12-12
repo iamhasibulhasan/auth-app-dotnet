@@ -1,5 +1,7 @@
 ﻿using AuthAppDotNet.Domain.Users;
 using AuthAppDotNet.Infrastructure.Persistence;
+using AuthAppDotNet.Infrastructure.RepositoryImplementations.Authentication;
+using AuthAppDotNet.Infrastructure.ServiceImplementations.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,8 +28,8 @@ public static class DependencyInjection
         var assembliesToScan = new[]
         {
             Assembly.GetExecutingAssembly(),
-            //Assembly.GetAssembly(typeof(EmployeeQueryService)),
-            //Assembly.GetAssembly(typeof(EmployeeRepository))
+            Assembly.GetAssembly(typeof(ApplicationUserService)),
+            Assembly.GetAssembly(typeof(ApplicationUserRepository))
         };
         services.RegisterAssemblyPublicNonGenericClasses(assembliesToScan)
             .Where(c => c.Name.EndsWith("Service") || c.Name.EndsWith("Repository"))
