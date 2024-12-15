@@ -9,6 +9,7 @@ public interface IApplicationUserService
     Task<Result> Create(ApplicationUserCreateDto model, CancellationToken cancellationToken, bool saveChanges = true);
     Task<Result> Update(ApplicationUserCreateDto model, CancellationToken cancellationToken, bool saveChanges = true);
     Task<Result> ModifyStatus(int id, int statusId, CancellationToken cancellationToken, bool saveChanges = true);
+    Task<Result> SignIn(SingInDto model, CancellationToken cancellationToken, bool saveChanges = true);
 
     #endregion
 

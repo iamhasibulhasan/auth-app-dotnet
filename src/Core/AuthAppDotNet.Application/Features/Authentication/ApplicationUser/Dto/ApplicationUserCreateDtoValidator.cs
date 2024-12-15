@@ -7,7 +7,7 @@ namespace AuthAppDotNet.Application.Features.Authentication.ApplicationUser.Dto
     {
         public ApplicationUserCreateDtoValidator()
         {
-            RuleFor(x => x.Name).NotEmpty().WithMessage("{PropertyName} is required."); ;
+            RuleFor(x => x.Name).NotEmpty().WithMessage("{PropertyName} is required.");
             RuleFor(obj => obj.UserName).NotEmpty()
                 .WithMessage("{PropertyName} is required")
                 .Length(3, 30)
