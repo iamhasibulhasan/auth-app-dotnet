@@ -105,7 +105,7 @@ namespace AuthAppDotNet.Infrastructure.ServiceImplementations.Authentication
                 DateTime.UtcNow.AddHours(1),
                 null);
             string tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
-            return tokenValue;
+            return $"Bearer {tokenValue}";
         }
     }
 }
