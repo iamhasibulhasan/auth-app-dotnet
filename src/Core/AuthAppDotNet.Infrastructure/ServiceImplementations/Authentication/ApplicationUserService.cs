@@ -90,7 +90,8 @@ namespace AuthAppDotNet.Infrastructure.ServiceImplementations.Authentication
         {
             var claims = new Claim[] {
             new (JwtRegisteredClaimNames.Sub, applicationUser.Id.ToString()),
-            new (JwtRegisteredClaimNames.Email, applicationUser.Email)
+            new (JwtRegisteredClaimNames.Email, applicationUser.Email),
+            new ("UserName",applicationUser.UserName)
             };
 
             var signingCreadentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.Secret)),
@@ -99,7 +100,7 @@ namespace AuthAppDotNet.Infrastructure.ServiceImplementations.Authentication
             var token = new JwtSecurityToken(
                 _options.Issuer,
                 _options.Audience,
-                null,
+                claims,
                 null,
                 DateTime.UtcNow.AddHours(1),
                 null);
