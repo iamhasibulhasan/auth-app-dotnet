@@ -59,7 +59,8 @@ namespace AuthAppDotNet.Infrastructure.ServiceImplementations.Authentication
 
         public async Task<Result> GetById(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var user = await _applicationUserRepository.GetByIdAsync(id, cancellationToken);
+            return Utility.GetSuccessMsg(CommonMessages.DataExists, user);
         }
 
         public async Task<Result> ModifyStatus(int id, int statusId, CancellationToken cancellationToken, bool saveChanges = true)
@@ -94,18 +95,20 @@ namespace AuthAppDotNet.Infrastructure.ServiceImplementations.Authentication
             new ("UserName",applicationUser.UserName)
             };
 
-            var signingCreadentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.Secret)),
-               SecurityAlgorithms.HmacSha256);
+            var signingCreadentials = new SigningCredentials(
+                new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(_options.Secret)),
+                SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
                 _options.Issuer,
                 _options.Audience,
                 claims,
                 null,
-                DateTime.UtcNow.AddHours(1),
-                null);
+                DateTime.UtcNow.AddHours(5),
+                signingCreadentials);
             string tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
-            return $"Bearer {tokenValue}";
+            return tokenValue;
         }
     }
 }

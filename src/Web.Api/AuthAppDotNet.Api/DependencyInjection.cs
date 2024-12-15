@@ -8,25 +8,26 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
     {
-        string secret = configuration["JWT:Secret"];
-        string issuer = configuration["JWT:Issuer"];
-        string audiance = configuration["JWT:Audience"];
+        string secret = configuration["JwtOptions:Secret"];
+        string issuer = configuration["JwtOptions:Issuer"];
+        string audiance = configuration["JwtOptions:Audience"];
 
         services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
             options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-        }).AddJwtBearer(y =>
+        })
+            .AddJwtBearer(options =>
         {
-            y.SaveToken = false;
-            y.TokenValidationParameters = new TokenValidationParameters
+            options.SaveToken = true;
+            options.TokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
                 ValidIssuer = issuer,
                 ValidAudience = audiance,
-                IssuerSigningKey = new SymmetricSecurityKey(
-                    Encoding.UTF8.GetBytes(secret))
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret)),
+
             };
         });
 

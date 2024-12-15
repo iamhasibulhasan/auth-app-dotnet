@@ -2,6 +2,7 @@
 using AuthAppDotNet.Application.Features.Authentication.ApplicationUser;
 using AuthAppDotNet.Application.Features.Authentication.ApplicationUser.Dto;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthAppDotNet.Api.Areas.Authentication;
@@ -49,6 +50,24 @@ public class AuthenticationController : ControllerBase
         else
         {
             result = Utility.GetValidationFailedMsg(FluentValidationHelper.GetErrorMessage(validationResult.Errors));
+        }
+        return StatusCode(result.StatusCode, result);
+    }
+
+    [Authorize]
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken = default)
+    {
+        Result result;
+
+        if (id != 0)
+        {
+            var command = new GetByIdApplicationUserCommand(id);
+            result = await _mediator.Send(command, cancellationToken);
+        }
+        else
+        {
+            result = Utility.GetValidationFailedMsg(CommonMessages.NoDataFound);
         }
         return StatusCode(result.StatusCode, result);
     }
