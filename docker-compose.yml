@@ -1,0 +1,6 @@
+services:
+  authappdotnet.api:
+    image: ${DOCKER_REGISTRY-}authappdotnetapi
+    build:
+      context: .
+      dockerfile: src/Web.Api/AuthAppDotNet.Api/Dockerfile

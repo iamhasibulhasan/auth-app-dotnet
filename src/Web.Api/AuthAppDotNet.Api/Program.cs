@@ -46,6 +46,8 @@ builder.Services.AddSwaggerGen(c =>
 
     });
 });
+// Load environment-specific settings
+builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true);
 
 
 builder.Services.Configure<JwtOptions>(configuration.GetSection("JwtOptions"));
