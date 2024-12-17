@@ -6,6 +6,10 @@
 #### Git Clone Repository 
        git clone https://github.com/iamhasibulhasan/auth-app-dotnet.git     
 
+#### Docker Build & Run
+       docker build -t authapp-dotnet:latest . 
+       docker run -p 8080:8080 -p 8081:8081 -e ASPNETCORE_ENVIRONMENT=Development --name authapp-container authapp-dotnet:latest
+
 ## 📦 **Features**
 - **Clean Architecture**: Ensures separation of concerns and maintainability.
 - **CQRS Pattern**: Command and Query Responsibility Segregation for clear application logic.
